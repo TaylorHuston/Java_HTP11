@@ -1,3 +1,3 @@
-# Java How To Program 10th Ed
+# Java How To Program 11th Ed
 
-I originally learned how to Program Java in undergrad from a previous version of this book. Working through the latest as a refresher.
+I originally learned Java in my undergrad from an older version of this book. Working through the latest as a refresher.
