@@ -11,11 +11,13 @@ public class EncryptionExercise {
         System.out.println("Input 4 digit number");
         int preEncryption = input.nextInt();
 
-        encrypt(preEncryption);
+        int encrytped = encrypt(preEncryption);
+        decrypt(encrytped);
 
     }
 
     public static int encrypt(int source) {
+        System.out.println(source);
         int result = 0;
 
         int digit1 = source/1000;
@@ -38,7 +40,40 @@ public class EncryptionExercise {
 
         System.out.println(digit1 + " " + digit2 + " " + digit3 + " " + digit4);
 
-        result = result+(digit3*1000)+(digit1*100)+(digit4*10)+digit2;
+        result = result+(digit3*1000)+(digit4*100)+(digit1*10)+digit2;
+
+        System.out.println(result);
+        System.out.println();
+        System.out.println();
+
+        return result;
+    }
+
+    public static int decrypt(int source) {
+        System.out.println(source);
+        int result = 0;
+
+        int digit1 = source/1000;
+        source = source%1000;
+
+        int digit2 = source/100;
+        source = source%100;
+
+        int digit3 = source/10;
+        source = source%10;
+
+        int digit4 = source;
+
+        System.out.println(digit1 + " " + digit2 + " " + digit3 + " " + digit4);
+
+        digit1 = digit1+=3;
+        digit2 = digit2+=3;
+        digit3 = digit3+=3;
+        digit4 = digit4+=3;
+
+        System.out.println(digit1 + " " + digit2 + " " + digit3 + " " + digit4);
+
+        result = result+(digit3*1000)+(digit4*100)+(digit1*10)+digit2;
 
         System.out.println(result);
 
